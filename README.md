@@ -2,19 +2,20 @@
 
 Provides a Go client for [smee.io](https://smee.io).
 
-Mimics the interface provided by <https://github.com/probot/smee>.
+Mimics the interface provided by [smee.io](https://github.com/probot/smee).
 
-Based on previous work by [@cryptix](https://github.com/cryptix/goSSEClient).
+Based on previous work by [@cryptix](https://github.com/cryptix/goSSEClient) and
+[@eswdd](https://github.com/eswdd/go-smee).
 
 ## Usage
 
 Import:
 
 ```go
-import "github.com/eswdd/go-smee/smee"
+import "github.com/jtyr/go-smee/smee"
 ```
 
-Optionally create a new smee.io channel:
+Optionally create a new `smee.io` channel:
 
 ```go
 source, err := smee.CreateSmeeChannel()

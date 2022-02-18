@@ -3,7 +3,7 @@ name: On PR
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   lint:
@@ -11,6 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Setup Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17.6
+
+      - name: Install dependencies
+        run: |
+          go get -u golang.org/x/lint/golint
 
       - name: Run pre-commit
         uses: pre-commit/action@v2.0.3
