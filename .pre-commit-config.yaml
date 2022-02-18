@@ -22,4 +22,3 @@ repos:
       - id: go-lint
       - id: go-imports
       - id: go-build
-      - id: go-mod-tidy
